@@ -1,0 +1,16 @@
+{
+  "projectInfo": {
+    "projectName": "TrialFive",
+    "createdDate": "Tuesday, September 10, 2024 at 8:17:26 PM",
+    "regenerateProxyClassDate": ""
+  },
+  "cloudApplication": {
+    "cloudApplicationId": "com.sap.android.wizard.sample",
+    "destinations": [
+      {
+        "id": "com.sap.android.wizard.sample"
+      }
+    ]
+  },
+  "msServerConfigurationName": ""
+}

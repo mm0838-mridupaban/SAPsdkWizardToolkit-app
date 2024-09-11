@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.9.20'
+    ext.work_version = '2.9.0'
+    ext.guava_android_version = '27.0.1-android'
+	ext.compose_version = '1.4.3'
+	
+    ext.repos = {
+        google()
+        jcenter()
+            maven {
+            url "C:\\Users\\MM0838\\Downloads\\SAP_BTP_SDK_for_Android_24.4.9\\SAP-BTP-SDK-for-Android-24.4.9\\m2repository"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.2'
+        classpath 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+        //for react native:
+        classpath("com.facebook.react:react-native-gradle-plugin")
+    }
+   repositories repos
+}
+
+allprojects {
+    repositories repos
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
